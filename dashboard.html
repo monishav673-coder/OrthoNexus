@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>OrthoNexus AI | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="dashboard-body">
+
+
+<div class="dashboard-layout">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <div class="brand-logo">
+                ON
+            </div>
+
+            <div>
+
+                <strong>
+                    OrthoNexus
+                </strong>
+
+                <small>
+                    AI PLATFORM
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <small class="section-title">
+                MAIN
+            </small>
+
+
+            <a class="side-link active">
+
+                <span>⌂</span>
+
+                Overview
+
+            </a>
+
+
+            <a class="side-link">
+
+                <span>🧬</span>
+
+                KneeTwin AI
+
+            </a>
+
+
+            <a class="side-link">
+
+                <span>◉</span>
+
+                Explainable AI
+
+            </a>
+
+
+            <a class="side-link">
+
+                <span>🦿</span>
+
+                Implant Simulator
+
+            </a>
+
+
+            <a class="side-link">
+
+                <span>▥</span>
+
+                Research
+
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <small class="section-title">
+                SYSTEM
+            </small>
+
+
+            <a class="side-link">
+
+                <span>⚙</span>
+
+                Settings
+
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="assistant-card">
+
+                <div class="assistant-icon">
+                    ✦
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI Assistant
+                    </strong>
+
+                    <small>
+                        Ask about your analysis
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-button"
+                onclick="logoutUser()">
+
+                ↪ Sign Out
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="dashboard-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="dashboard-header">
+
+
+            <div>
+
+                <small class="header-label">
+                    CLINICAL INTELLIGENCE
+                </small>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="notification">
+                    ♧
+                    <span></span>
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="avatar">
+                        U
+                    </div>
+
+                    <div>
+
+                        <strong id="userDisplayName">
+                            User
+                        </strong>
+
+                        <small id="userDisplayRole">
+                            Researcher
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="dashboard-hero">
+
+
+            <div class="hero-text">
+
+                <div class="online-badge">
+
+                    <span></span>
+
+                    ORTHONEXUS AI ONLINE
+
+                </div>
+
+
+                <h2>
+
+                    Welcome back,
+                    <span id="heroUser">
+                        User
+                    </span>.
+
+                </h2>
+
+
+                <p>
+
+                    Your intelligent knee workspace is ready.
+                    Start a new analysis or explore your previous cases.
+
+                </p>
+
+
+                <button class="hero-button">
+
+                    + Start New Analysis
+
+                </button>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="visual-ring ring-1"></div>
+                <div class="visual-ring ring-2"></div>
+                <div class="visual-ring ring-3"></div>
+
+                <div class="hero-knee">
+                    🦵
+                </div>
+
+                <span>
+                    KNEE AI
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        TOTAL ANALYSES
+                    </span>
+
+                    <div class="stat-icon">
+                        ◈
+                    </div>
+
+                </div>
+
+                <h2>
+                    128
+                </h2>
+
+                <small class="green-text">
+                    ↑ 12% this month
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        KNEETWIN PROFILES
+                    </span>
+
+                    <div class="stat-icon purple-icon">
+                        ◉
+                    </div>
+
+                </div>
+
+                <h2>
+                    76
+                </h2>
+
+                <small class="green-text">
+                    ↑ 8 new profiles
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        HIGH RISK CASES
+                    </span>
+
+                    <div class="stat-icon orange-icon">
+                        !
+                    </div>
+
+                </div>
+
+                <h2>
+                    23
+                </h2>
+
+                <small class="orange-text">
+                    Requires review
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        AI CONFIDENCE
+                    </span>
+
+                    <div class="stat-icon green-icon">
+                        ✦
+                    </div>
+
+                </div>
+
+                <h2>
+                    94.6%
+                </h2>
+
+                <small class="green-text">
+                    Excellent
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MAIN GRID ================= -->
+
+        <section class="content-grid">
+
+
+            <!-- X-RAY -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <small>
+                            AI ANALYSIS
+                        </small>
+
+                        <h3>
+                            Knee X-Ray Analysis
+                        </h3>
+
+                    </div>
+
+                    <span class="live-label">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="upload-box">
+
+                    <div class="upload-symbol">
+                        🩻
+                    </div>
+
+                    <h3>
+                        Upload a knee image
+                    </h3>
+
+                    <p>
+                        Drag & drop your image here
+                        or browse from your device.
+                    </p>
+
+
+                    <label class="upload-button">
+
+                        Browse X-Ray
+
+                        <input
+                            type="file"
+                            accept="image/*"
+                            hidden
+                            onchange="showFileName(this)"
+                        >
+
+                    </label>
+
+
+                    <small id="fileName">
+                        PNG • JPG • JPEG
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT CASES -->
+
+            <div class="dashboard-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <small>
+                            PATIENT WORKSPACE
+                        </small>
+
+                        <h3>
+                            Recent Cases
+                        </h3>
+
+                    </div>
+
+                    <button class="text-button">
+                        View all →
+                    </button>
+
+                </div>
+
+
+                <div class="case-row">
+
+                    <div class="case-avatar">
+                        K1
+                    </div>
+
+                    <div class="case-details">
+
+                        <strong>
+                            KNEE-1024
+                        </strong>
+
+                        <small>
+                            Right Knee • 2 min ago
+                        </small>
+
+                    </div>
+
+                    <span class="risk high">
+                        HIGH
+                    </span>
+
+                </div>
+
+
+                <div class="case-row">
+
+                    <div class="case-avatar purple-case">
+                        K2
+                    </div>
+
+                    <div class="case-details">
+
+                        <strong>
+                            KNEE-1023
+                        </strong>
+
+                        <small>
+                            Left Knee • 1 hour ago
+                        </small>
+
+                    </div>
+
+                    <span class="risk medium">
+                        MEDIUM
+                    </span>
+
+                </div>
+
+
+                <div class="case-row">
+
+                    <div class="case-avatar green-case">
+                        K3
+                    </div>
+
+                    <div class="case-details">
+
+                        <strong>
+                            KNEE-1022
+                        </strong>
+
+                        <small>
+                            Right Knee • Yesterday
+                        </small>
+
+                    </div>
+
+                    <span class="risk low">
+                        LOW
+                    </span>
+
+                </div>
+
+
+                <div class="case-row">
+
+                    <div class="case-avatar orange-case">
+                        K4
+                    </div>
+
+                    <div class="case-details">
+
+                        <strong>
+                            KNEE-1021
+                        </strong>
+
+                        <small>
+                            Left Knee • 2 days ago
+                        </small>
+
+                    </div>
+
+                    <span class="risk medium">
+                        MEDIUM
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= AI MODULES ================= -->
+
+        <section class="modules-section">
+
+            <div class="module-heading">
+
+                <div>
+
+                    <small>
+                        INTELLIGENT MODULES
+                    </small>
+
+                    <h2>
+                        Explore OrthoNexus AI
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="module-grid">
+
+
+                <div class="module-card">
+
+                    <div class="module-icon">
+                        🧬
+                    </div>
+
+                    <h3>
+                        KneeTwin AI
+                    </h3>
+
+                    <p>
+                        Create a personalized digital
+                        representation of a knee.
+                    </p>
+
+                    <button>
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="module-card">
+
+                    <div class="module-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        Explainable AI
+                    </h3>
+
+                    <p>
+                        Visualize the factors behind
+                        AI-generated analysis.
+                    </p>
+
+                    <button>
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="module-card">
+
+                    <div class="module-icon">
+                        🦿
+                    </div>
+
+                    <h3>
+                        Implant Simulator
+                    </h3>
+
+                    <p>
+                        Explore digital implant-fit
+                        simulation scenarios.
+                    </p>
+
+                    <button>
+                        Explore →
+                    </button>
+
+                </div>
+
+
+                <div class="module-card">
+
+                    <div class="module-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Research Hub
+                    </h3>
+
+                    <p>
+                        Explore trends, statistics
+                        and research insights.
+                    </p>
+
+                    <button>
+                        Explore →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
